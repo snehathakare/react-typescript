@@ -2,9 +2,11 @@ import React from "react";
 import "./App.css";
 import Button from "./components/Button";
 import Greet from "./components/Greet";
+import Login from "./components/Auth/Login";
 import Input from "./components/Input";
 import Person from "./components/Person";
 import Status from "./components/Status";
+import User from "./components/Auth/User";
 
 function App() {
   const PersonList = [
@@ -20,6 +22,8 @@ function App() {
 
   return (
     <div className="App">
+      <Login />
+      <User username="" email="" />
       <Greet name="Sneha" isLoggedIn={true} />
       <Person names={PersonList} />
       <Status status="loading" />
